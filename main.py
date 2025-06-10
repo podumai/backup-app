@@ -2,7 +2,13 @@ import argparse
 from backup import Backuper
 import logging
 
-logging.basicConfig(filename="log.txt", level=logging.ERROR, encoding="UTF-8")
+logging.basicConfig(
+    filename="log.txt",
+    filemode="w",
+    format="%(asctime)s %(message)s",
+    level=logging.ERROR,
+    encoding="UTF-8"
+)
 
 def main() -> None:
     parser: argparse.ArgumentParser = argparse.ArgumentParser(
